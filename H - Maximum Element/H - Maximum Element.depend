@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1665750190 source:f:\codes\problem solving\h - maximum element\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<cmath>
+	<string>
+	<cctype>
+	<cstring>
+	<map>
+	<unordered_map>
+	<set>
+	<climits>
+	<iomanip>
+	<queue>
+	<stack>
+
