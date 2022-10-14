@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1665728013 source:f:\codes\problem solving\p - sereja and dima\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<cmath>
+	<string>
+	<cctype>
+	<cstring>
+	<map>
+	<unordered_map>
+	<set>
+	<climits>
+	<iomanip>
+	<queue>
+	<stack>
+

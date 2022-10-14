@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1663960787 source:f:\codes\problem solving\n\main.cpp
+	<iostream>
+	<string>
+	<cstring>
+

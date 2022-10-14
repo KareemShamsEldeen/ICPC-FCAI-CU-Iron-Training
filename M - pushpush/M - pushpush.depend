@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1665743429 source:f:\codes\problem solving\m - pushpush\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<cmath>
+	<string>
+	<cctype>
+	<cstring>
+	<map>
+	<unordered_map>
+	<set>
+	<climits>
+	<iomanip>
+	<queue>
+	<stack>
+

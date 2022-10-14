@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1665727091 source:f:\codes\problem solving\s - cyllinder\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<cmath>
+	<string>
+	<cctype>
+	<cstring>
+	<map>
+	<unordered_map>
+	<set>
+	<climits>
+	<iomanip>
+	<queue>
+	<stack>
+
