@@ -1,6 +1,8 @@
+#include <bits/stdc++.h>
 #include<iostream>
 #include<algorithm>
 #include<vector>
+#include<queue>
 #include<cmath>
 #include<string>
 #include<cctype>
@@ -12,11 +14,14 @@
 #include<iomanip>
 #include<queue>
 #include<stack>
+#include <iostream>
 using namespace std;
 typedef long long ll;
+typedef long double ld;
+typedef unsigned long long ull;
 
-int main()
-{
+int main() {
+
     ll q;
     cin>>q;
     queue<pair <ll,ll>> dq;
@@ -30,50 +35,30 @@ int main()
             ll x,c;
             cin>>x>>c;
 
-            pair <ll,ll>pair1;
+            pair <ll,ll> pair1;
             pair1=make_pair(c, x);
-            dq.push_back(pair1);
+            dq.push(pair1);
         }
         else if(n==2)
         {
             ll c,a,sum=0;
             cin>>c;
-            if(!dq.empty())
+            while(!dq.empty())
             {
-                    ll t=0;
-                    for(ll i=0; i<c; i++)
-                    {
-                        if(dq[0].second==c)
-                        {
-                            sum=dq[0].second*dq[0].first;
-                            break;
-                        }
-                        else if(dq[t].second>0 && dq[t].second<c)
-                        {
-                            //dq[t].second-=1;
-                            sum+=dq[t].first*dq[0].second;
-                            c=c-dq[0].second;
-                            dq.pop_front();
-
-                        }
-                        else if(dq[t].second>0 && dq[t].second>c)
-                        {
-                            //dq[t].second-=1;
-                            sum+=dq[t].first*c;
-                            dq[0].second=dq[0].second-c;
-                            c=0;
-                            break;
-
-                        }
-                        else if(dq[t].second==0)
-                        {
-                            dq.pop_front();
-//                          dq[t].second-=1;
-//                          sum+=dq[t].first;
-                        }
-                    }
+                auto &u = dq.front();
+                if (u.first >= c) {
+                    u.first -= c;
+                    sum += c * u.second;
+                    if (!u.first)
+                        dq.pop();
+                    break;
+                }
+                else {//u.first < c
+                    sum += u.first * u.second;
+                    c -= u.first;
+                    dq.pop();
+                }
             }
-
             cout<<sum<<endl;
         }
     }
