@@ -1,6 +1,8 @@
+#include <bits/stdc++.h>
 #include<iostream>
 #include<algorithm>
 #include<vector>
+#include<queue>
 #include<cmath>
 #include<string>
 #include<cctype>
@@ -12,15 +14,15 @@
 #include<iomanip>
 #include<queue>
 #include<stack>
+#include <iostream>
 using namespace std;
 typedef long long ll;
+typedef long double ld;
+typedef unsigned long long ull;
+int main() {
 
-
-int main()
-{
-    vector<ll> v1;
-    ll maxx=0;
-    ll maxxx=0;
+    stack<ll> s1;
+    stack<ll> mx;
     ll n;
     cin>>n;
     while(n--)
@@ -31,20 +33,22 @@ int main()
         {
             ll x;
             cin>>x;
-            if(x>maxx){maxx=x;}
-            v1.push_back(x);
-            maxxx=maxx;
+            s1.push(x);
+            if (mx.empty() or (!mx.empty() and mx.top() <= x)) {
+                mx.push(x);
+            }
         }
         else if(t==2)
         {
-            int pop1=v1.back();
-            v1.pop_back();
-            if(pop1==maxx){maxx=maxxx;}
+            int pop1=s1.top();
+            s1.pop();
+            if(pop1==mx.top()){mx.pop();}
         }
         else if(t==3)
         {
-            cout<<maxx<<endl;
+            cout<<mx.top()<<endl;
         }
     }
     return 0;
+    
 }
